@@ -7,10 +7,10 @@ const qualityRouter = express.Router()
 
 
 qualityRouter.post("/quality", async(req, res)=> {
-    const {inLanguage, inCode} = req.body
-    console.log(inLanguage, inCode)
+    const { inCode} = req.body
+    // console.log(inLanguage, inCode)
     // console.log(req.body)
-   const prompt = `take the role of code quality checker and check the quality the following ${inLanguage} code with following parameters
+   const prompt = `take the role of code quality checker and check the quality of the following code with following parameters
    \n 1. Code Consistency: Evaluate the code for consistent coding style, naming conventions, and formatting.
    \n2. Code Performance: Assess the code for efficient algorithms, optimized data structures, and overall performance considerations.
    \n3. Code Documentation: Review the code for appropriate comments, inline documentation, and clear explanations of complex logic.
@@ -43,7 +43,7 @@ const getData = async(prompt, res) => {
             model: "gpt-3.5-turbo",
             messages: [{role: "user", content: prompt}],
           });
-            console.log(chatCompletion.data.choices[0].message.content);
+            // console.log(chatCompletion.data.choices[0].message.content);
             res.status(200).json({"msg": chatCompletion.data.choices[0].message.content})
         
     } catch (error) {

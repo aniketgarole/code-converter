@@ -7,11 +7,11 @@ const debugRouter = express.Router()
 
 
 debugRouter.post("/debug", async(req, res)=> {
-    const {inLanguage, inCode} = req.body
-    console.log(inLanguage, inCode)
+    const { inCode} = req.body
+    // console.log(inLanguage, inCode)
     // console.log(req.body)
-   const prompt = `take the role of code debuger and debug the following ${inLanguage} code. The code is: \n\n ${inCode}`
-   console.log(prompt)
+   const prompt = `take the role of code debuger and debug the following code. The code is: \n\n ${inCode}`
+//    console.log(prompt)
 
         try {
             
@@ -32,7 +32,7 @@ const getData = async(prompt, res) => {
             model: "gpt-3.5-turbo",
             messages: [{role: "user", content: prompt}],
           });
-            console.log(chatCompletion.data.choices[0].message.content);
+            // console.log(chatCompletion.data.choices[0].message.content);
             res.status(200).json({"msg": chatCompletion.data.choices[0].message.content})
         
     } catch (error) {
