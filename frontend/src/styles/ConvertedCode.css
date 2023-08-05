@@ -1,0 +1,18 @@
+/* Styling for the converted code */
+.converted-code {
+    flex: 1;
+    /* overflow: auto; */
+    overflow-wrap: break-word;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    background-color: #f9f9f9;
+  }
+
+ pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+  
