@@ -5,7 +5,7 @@ const ConvertedCode = ({ convertedCode }) => {
   return (
     
     <div className="converted-code">
-      <pre>Result // <br /><br />{convertedCode}</pre>
+      <pre>Updated Result // <br /><br />{convertedCode}</pre>
     </div>
     
   );

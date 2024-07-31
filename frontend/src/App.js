@@ -29,7 +29,7 @@ function App() {
       }
 
       setLoading(true)
-      let res = await axios.post(`http://localhost:8080/convert`, payload)
+      let res = await axios.post(`https://tricky-singlet-hen.cyclic.app/convert`, payload)
       // console.log(res.data.msg)
       setLoading(false)
       setConvertedCode(res.data.msg);
@@ -53,7 +53,7 @@ function App() {
       }
 
       setLoading(true)
-      let res = await axios.post(`http://localhost:8080/debug`, payload)
+      let res = await axios.post(`https://tricky-singlet-hen.cyclic.app/debug`, payload)
       // console.log(res.data.msg)
       setLoading(false)
       setConvertedCode(res.data.msg);
@@ -75,7 +75,7 @@ function App() {
 
       setLoading(true)
       
-      let res = await axios.post(`http://localhost:8080/quality`, payload)
+      let res = await axios.post(`https://tricky-singlet-hen.cyclic.app/quality`, payload)
       // console.log(res.data.msg)
       setLoading(false)
       setConvertedCode(res.data.msg);
